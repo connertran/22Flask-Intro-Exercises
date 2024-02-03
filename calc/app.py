@@ -44,6 +44,8 @@ func_dict= {
 }
 @app.route('/math/<operation>')
 def simplify_func(operation):
+    """Avoiding repeating codes
+    Putting all codes/operations in one place"""
     url_operation = func_dict.get(operation)
     a = int(request.args.get('a'))
     b = int(request.args.get('b'))
